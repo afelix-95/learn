@@ -41,14 +41,13 @@ You'll host your custom skill in an Azure Function App. Let's create that Functi
 1. In the Azure portal, select **Create a resource**.
 1. In the **Search services and marketplace** textbox, type **Function App** and then select **Function App**.
 1. In the **Function App** page, select **Create**.
+1. In the **Select a hosting option** page, select **Consumption**.
 1. In the **Subscription** drop-down list, select your subscription.
 1. In the **Resource group** drop-down list, select **FormsRecognizerResources**.
 1. In the **Function app name** textbox, type a unique name.
-1. Next to **Publish** select **Code**.
 1. In the **Runtime stack** drop-down list, select **Python**.
-1. In the **Version** drop-down list, select **3.7**.
-1. In the **Region** drop-down list, select **West US**.
-1. In the **Plan type** drop-down list, select **Consumption (Serverless)** and then select **Review + create**.
+1. In the **Version** drop-down list, select **3.11**.
+1. In the **Region** drop-down list, select **West US** and then select **Review + create**.
 
     :::image type="content" source="../media/4-create-function.png" alt-text="Screenshot showing how to create a new Function App in the Azure portal." lightbox="../media/4-create-function.png":::
 
@@ -64,13 +63,13 @@ The Python code that you'll deploy needs to know the endpoint and API key for yo
 1. In the Azure portal, to the right of the **KEY 1** textbox, select the **Copy to clipboard** button.
 1. Switch to Notepad and paste the key on a new line.
 1. In the Azure portal, select **All resources** and then select the function app you created in the previous section.
-1. Under **Settings**, select **Configuration** and then select **+ New application setting**.
+1. Under **Settings**, select **Environment variables** and then select **+ Add**.
 1. In the **Add/Edit application setting** dialog, in the **Name** textbox, type **FORMS_RECOGNIZER_ENDPOINT**.
-1. Copy the endpoint value from Notepad, paste it in the **Value** textbox, and then select **OK**.
-1. Select **+ New application setting**.
+1. Copy the endpoint value from Notepad, paste it in the **Value** textbox, and then select **Apply**.
+1. Select **+ Add**.
 1. In the **Add/Edit application setting** dialog, in the **Name** textbox, type **FORMS_RECOGNIZER_KEY**.
-1. Copy the key from Notepad, paste it in the **Value** textbox, and then select **OK**. 
-1. At the top of the **Configuration** page, select **Save** and then select **Continue**. The function app configuration is complete.
+1. Copy the key from Notepad, paste it in the **Value** textbox, and then select **Apply**. 
+1. At the bottom of the **Environment variables** page, select **Apply** and then select **Confirm**. The function app configuration is complete.
 
     :::image type="content" source="../media/4-application-settings.png" alt-text="Screenshot showing application settings in the Azure portal." lightbox="../media/4-application-settings.png":::
 
